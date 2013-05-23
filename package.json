@@ -1,0 +1,25 @@
+{
+  "name": "kerouac-jsondataview",
+  "version": "0.0.1",
+  "description": "JSON data view rendering for Kerouac.",
+  "keywords": [
+    "kerouac",
+    "static",
+    "json"
+  ],
+  "main": "./lib/content.js",
+  "dependencies": {
+    "diveSync": "0.2.x",
+    "kerouac": "0.0.x",
+    "async": "0.2.x"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qur2/kerouac-jsondataview"
+  },
+  "author": "Aurélien Scoubeau",
+  "license": "MIT"
+}
