@@ -43,8 +43,8 @@ To build the content, you need 3 files: the front matter, the JSON data and the 
 ### numbers.fm
 
     ---
-    data: json-files/numbers.json
-    view: views/numbers.ejs
+    data: json-files/numbers.json,json-files/letters.json
+    view: views/word.ejs
     layout: main.ejs
     ---
 
@@ -52,15 +52,24 @@ To build the content, you need 3 files: the front matter, the JSON data and the 
 
     {"numbers": [1, 2, 3]}
 
-### numbers.ejs
+### letters.json
+
+    {"letters": ['a', 'z']}
+
+### word.ejs
 
     <ul>
-    <% data.numbers.forEach(function (n) { %>
+    <% numbers.forEach(function (n) { %>
       <li><%= n %></li>
     <% }) %>
     </ul>
+    <ul>
+    <% letters.forEach(function (l) { %>
+      <li><%= l %></li>
+    <% }) %>
+    </ul>
 
-Using those 3 files, the plugin will build a chunk of HTML, which will later be rendered in its layout.
+Using those 4 files, the plugin will build a chunk of HTML, which will later be rendered in its layout.
 
 
 ## Examples
@@ -75,6 +84,11 @@ The following site is built with kerouac and kerouac-jsondataview.
     // TODO
     $ npm install
     $ make test
+
+
+## API changes
+
+- 1.0.0: The data is injected using the json filename as a key instead of ``data``. Views have to be updated accordingly.
 
 
 ## Credits

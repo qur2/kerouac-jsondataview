@@ -1,6 +1,6 @@
 {
   "name": "kerouac-jsondataview",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "JSON data view rendering for Kerouac.",
   "keywords": [
     "kerouac",
